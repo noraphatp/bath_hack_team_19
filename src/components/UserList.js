@@ -1,28 +1,27 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import { db } from "../firebase";
 
 const UserList = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        const response = await axios.get('http://localhost:5000/users');
-        setUsers(response.data);
-      } catch (error) {
-        console.error('Error fetching users:', error);
-      }
-    };
+    const unsubscribe = db.collection("users").onSnapshot((snapshot) => {
+      const usersData = [];
+      snapshot.forEach((doc) => usersData.push({ ...doc.data(), id: doc.id }));
+      setUsers(usersData);
+    });
 
-    fetchUsers();
+    return () => {
+      unsubscribe();
+    };
   }, []);
 
   return (
     <div>
-      <h2>User List</h2>
+      <h1>User List</h1>
       <ul>
         {users.map((user) => (
-          <li key={user._id}>{user.username}</li>
+          <li key={user.id}>{user.email}</li>
         ))}
       </ul>
     </div>
