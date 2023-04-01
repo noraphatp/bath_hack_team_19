@@ -32,6 +32,10 @@ const AppRoutes = () => {
 					path="/accessibility"
 					element={<Accessibility />}
 				/>{" "}
+				<Route
+					path="/users"
+					element={<UserList />}
+				/>
 				{/* Add a route for Accessibility */}
 				<Route
 					path="/inhome"
