@@ -5,11 +5,8 @@
 }
 
 .container {
-	/* background-color: #fff2f2;
-   */
   background: linear-gradient(180deg, #112D4E 0%, #3F72AF 50%);
 	height: 100vh;
-	/* cover */
 	background-size: cover;
 }
 
@@ -23,7 +20,6 @@
   margin-top: 5%;
   margin-bottom: 20px;
   width: 20%;
-  /* align cetnral */
   align-self: center;
 }
 
@@ -49,4 +45,8 @@
   justify-content: center;
   align-items: center;
   gap: 60px;
+}
+
+.button-label {
+	color: #ffffff;
 }
