@@ -21,7 +21,7 @@ function SignupPage() {
 					onSubmit={handleSubmit}
 					className={SignupPageCSS.form}
 				>
-					<div>
+					{/* <div>
 						<label htmlFor="fullnanme">Full name</label>
 						<input
 							type="fullname"
@@ -30,7 +30,7 @@ function SignupPage() {
 							onChange={e => setFullname(e.target.value)}
 							required
 						/>
-					</div>
+					</div> */}
 					<div>
 						<label htmlFor="email">Email</label>
 						<input
