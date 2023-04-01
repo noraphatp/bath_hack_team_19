@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: #7286D3;
   padding: 1rem;
 }
 
@@ -29,18 +29,103 @@
 
 .navbarItem {
   margin-left: 1rem;
+  font-family: var(--primary-font-family);
+  padding-right: 3rem;
 }
 
 .navbarLink {
-  color: #fff;
+  color: #FFF2F2; /* Updated initial color */
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+}
+
+.navbarLink::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: center;
+  transition: transform 0.15s ease-out;
 }
 
 .navbarLink:hover {
-  color: #ddd;
+  color: #fff; /* Updated hover color */
+}
+
+.navbarLink:hover::after {
+  transform: scaleX(1);
 }
 
 .navbarLogo img {
   height: 80px;
+}
+
+/* Add these styles to your navbar.module.css file */
+
+.navbarDropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.navbarDropdownButton {
+  background-color: inherit;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.navbarDropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.navbarDropdownVisible .navbarDropdownContent {
+  display: block;
+}
+
+.navbarDropdownContent button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border: none;
+  background-color: inherit;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.navbarDropdownContent button:hover {
+  background-color: #ddd;
+}
+
+/* Add these styles to apply the color schemes */
+
+:root {
+  --default-bg-color: #282c34;
+  --default-text-color: white;
+}
+
+:root[data-theme='colorblind-friendly'] {
+  --default-bg-color: #006400;
+  --default-text-color: white;
+}
+
+/* Replace your existing .navbar background-color and color rules with these */
+
+.navbar {
+  background-color: var(--default-bg-color);
+  color: var(--default-text-color);
+.container {
+  font-size: var(--font-size, 16px);
 }
