@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
-// import { useHistory } from "react-router-dom";
 import Navbar from './Navbar';
 import styles from '../css/findjobs.module.css';
 import React, { useState, useEffect } from 'react';
-
 
 function FindJobs() {
   const [jobs, setJobs] = useState([]);
@@ -31,7 +29,7 @@ function FindJobs() {
   }, [search, jobs]);
 
   return (
-    <div className="jobs-page">
+    <div className={styles.jobsPage}>
       <Navbar />
       <h1>Jobs</h1>
       <input
@@ -40,9 +38,9 @@ function FindJobs() {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-      <div className="jobs-list">
+      <div className={styles.jobsList}>
         {filteredJobs.map((job) => (
-          <div key={job.id} className="job-item">
+          <div key={job.id} className={styles.jobItem}>
             <h2>{job.title}</h2>
             <p>{job.location}</p>
           </div>
