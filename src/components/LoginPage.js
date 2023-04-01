@@ -19,7 +19,7 @@ const LoginPage = () => {
         await auth.createUserWithEmailAndPassword(email, password);
       } else {
         await auth.signInWithEmailAndPassword(email, password);
-        navigate("/");
+        navigate("/find-jobs");
       }
       setError("");
     } catch (err) {
