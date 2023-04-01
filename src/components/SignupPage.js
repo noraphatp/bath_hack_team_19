@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import LoginPageCSS from "../css/loginpage.module.css";
+import SignupPageCSS from "../css/loginpage.module.css";
 
-function LoginPage() {
+function SignupPage() {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+  const [fullname, setFullname] = useState("");
 
 	const handleSubmit = e => {
 		e.preventDefault();
@@ -13,13 +14,23 @@ function LoginPage() {
 	};
 
 	return (
-		<div className={LoginPageCSS.container}>
-			<div className={LoginPageCSS["sub-container"]}>
-				<p className={LoginPageCSS.header}>Login</p>
+		<div className={SignupPageCSS.container}>
+			<div className={SignupPageCSS["sub-container"]}>
+				<p className={SignupPageCSS.header}>Sign up</p>
 				<form
 					onSubmit={handleSubmit}
-					className={LoginPageCSS.form}
+					className={SignupPageCSS.form}
 				>
+					<div>
+						<label htmlFor="fullnanme">Full name</label>
+						<input
+							type="fullname"
+							id="fullname"
+							value={fullname}
+							onChange={e => setFullname(e.target.value)}
+							required
+						/>
+					</div>
 					<div>
 						<label htmlFor="email">Email</label>
 						<input
@@ -42,16 +53,16 @@ function LoginPage() {
 					</div>
 					<button
 						type="submit"
-						className={LoginPageCSS["login-button"]}
+						className={SignupPageCSS["login-button"]}
 					>
-						Login
+						Signup
 					</button>
-					<p className={LoginPageCSS["register-text"]}>
-						Don't have an account yet?
+					<p className={SignupPageCSS["register-text"]}>
+						Already have an account yet?
 					</p>
-					<Link to="/signup" className={LoginPageCSS['link-to-signup']}>
+					<Link to="/login" className={SignupPageCSS['link-to-signup']}>
 						<button>
-							Create account
+							Login
 						</button>
 					</Link>
 				</form>
@@ -60,4 +71,4 @@ function LoginPage() {
 	);
 }
 
-export default LoginPage;
+export default SignupPage;
