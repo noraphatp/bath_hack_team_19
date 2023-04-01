@@ -31,9 +31,7 @@ const AppRoutes = () => {
 				<Route
 					path="/accessibility"
 					element={<Accessibility />}
-				/>{" "}
-				{/* Add a route for Accessibility */}
-				{/* Add a route for About */}
+				/>
 			</Routes>
 		</Router>
 	);
