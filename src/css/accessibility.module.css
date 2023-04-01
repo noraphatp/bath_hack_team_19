@@ -1,13 +1,38 @@
 .contentContainer {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  margin: 100px auto;
+  max-width: 600px;
+  background-color: var(--primary-bg-color);
+  color: #fff;
+}
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Add any other desired styles here */
-    /* set margin top to 170px */
-    margin-top: 170px;
+.centralAlign {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-    padding: 40px 80px; /* Add the desired padding */
-    border: 1px solid #ccc; /* Add the desired border */
-  }
-  
+.welcome {
+  /* font-size: 28px; */
+  margin-bottom: 48px;
+}
+
+.optionsTitle {
+  font-weight: 400;
+  margin-bottom: 30px;
+} 
+
+.optionsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.optionsDropdown {
+  margin-bottom: 36px;
+}
