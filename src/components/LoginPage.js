@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import '../App.css';
-import { Router, Route, Switch } from "react-router-dom";
+import LoginPageCSS from '../css/loginpage.module.css';
 
 function LoginPage() {
   const [email, setEmail] = useState('');
@@ -13,7 +12,7 @@ function LoginPage() {
   };
 
   return (
-    <div className="App">
+    <div className={LoginPageCSS.container}>
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
         <div>

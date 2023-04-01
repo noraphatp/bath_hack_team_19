@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
+import HomePageCSS from "../css/homepage.module.css";
 
-const HomePage = () => {
+export default function HomePage() {
   return (
     <div>
       <h1>Welcome to the Home Page</h1>
@@ -12,5 +13,3 @@ const HomePage = () => {
     </div>
   );
 };
-
-export default HomePage;
