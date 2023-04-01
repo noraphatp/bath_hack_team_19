@@ -1,10 +1,16 @@
 import React from "react";
-import HomePageCSS from '../css/homePage.module.css';
+import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
-export default function HomePage() {
+const HomePage = () => {
   return (
-    <div className={HomePageCSS.container}>
-      
+    <div>
+      <h1>Welcome to the Home Page</h1>
+      <Link to="/login">
+        <button>Go to Login Page</button>
+      </Link>
     </div>
   );
-}
+};
+
+export default HomePage;
