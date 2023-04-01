@@ -7,7 +7,7 @@ function FindJobs() {
   const [jobs, setJobs] = useState([]);
   const [search, setSearch] = useState('');
   const [filteredJobs, setFilteredJobs] = useState([]);
-
+  const [searchQuery, setSearchQuery] = useState("");
   useEffect(() => {
     // Replace this with an API call to fetch jobs data
     const mockJobsData = [
@@ -20,34 +20,46 @@ function FindJobs() {
     setJobs(mockJobsData);
   }, []);
 
-  useEffect(() => {
-    setFilteredJobs(
-      jobs.filter((job) =>
-        job.title.toLowerCase().includes(search.toLowerCase())
-      )
+  const filterJobs = (query) => {
+    const filtered = jobs.filter((job) =>
+      job.title.toLowerCase().includes(query.toLowerCase())
     );
-  }, [search, jobs]);
+    setFilteredJobs(filtered);
+  };
 
+
+  useEffect(() => {
+    filterJobs(searchQuery);
+  }, [jobs, searchQuery]);
+  
+  const handleSearch = (event) => {
+    setSearchQuery(event.target.value);
+  };
+  
   return (
-    <div className={styles.jobsPage}>
+    <div>
       <Navbar />
-      <h1>Jobs</h1>
+      <h1>Find Jobs</h1>
       <input
         type="text"
-        placeholder="Search jobs"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
+        placeholder="Search jobs by title"
+        value={searchQuery}
+        onChange={handleSearch}
       />
-      <div className={styles.jobsList}>
-        {filteredJobs.map((job) => (
-          <div key={job.id} className={styles.jobItem}>
-            <h2>{job.title}</h2>
-            <p>{job.location}</p>
-          </div>
-        ))}
-      </div>
-    </div>
+  
+  <h2>Job Listings</h2>
+    <ul>
+      {filteredJobs.map((job) => (
+        <li key={job.id}>
+          <h3>{job.title}</h3>
+          <p>{job.location}</p>
+          <p>{job.description}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
   );
-}
+      }
+  
 
 export default FindJobs;
