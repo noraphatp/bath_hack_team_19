@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 // import { useHistory } from "react-router-dom";
 import Navbar from './Navbar';
-import HomePageCSS from "../css/homePage.module.css";
 
 export default function Accessibility() {
   return (

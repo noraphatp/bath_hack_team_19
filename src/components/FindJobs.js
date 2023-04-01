@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 // import { useHistory } from "react-router-dom";
 import Navbar from './Navbar';
-import HomePageCSS from "../css/homePage.module.css";
 import styles from '../css/findjobs.module.css';
 import React, { useState, useEffect } from 'react';
 
