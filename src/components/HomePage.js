@@ -9,6 +9,9 @@ const HomePage = () => {
       <Link to="/login">
         <button>Go to Login Page</button>
       </Link>
+      <Link to="/users">
+        <button>View User List</button> 
+      </Link> 
     </div>
   );
 };

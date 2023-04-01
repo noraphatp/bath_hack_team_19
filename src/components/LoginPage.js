@@ -1,16 +1,26 @@
 import React, { useState } from 'react';
 import '../App.css';
 import { Router, Route, Switch } from "react-router-dom";
+import axios from 'axios';
 
 function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Email:', email, 'Password:', password);
-    // Add your authentication logic here
-  };
+    try {
+      const response = await axios.post('http://localhost:5000/register', {
+        username: email,
+        password: password,
+      });
+      console.log('User registered:', response.data);
+      // Redirect to another page or show a success message
+    } catch (error) {
+      console.log('Registration failed:', error.response.data);
+      // Show an error message or handle the error
+    }
+  }; 
 
   return (
     <div className="App">
