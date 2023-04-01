@@ -4,6 +4,66 @@
   box-sizing: border-box;
 }
 
-/* .container {
+.container {
+   /* generate background color gradient from #112D4E to #3F72AF to #DBE2EF to #F9F7F7*/
+  background: linear-gradient(180deg, #112D4E 0%, #3F72AF 50%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 
 
-} */
+.logo {
+  margin-top: 5%;
+  margin-bottom: 20px;
+  width: 20%;
+}
+
+.welcome {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 48px;
+}
+
+.description {
+  /* Align central */
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  max-width: 80%;
+  margin-top: 20px;
+}
+
+.question {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+.text-1 {
+  font-size: 18px;
+  align-self: center;
+  margin-bottom: 64px;
+}
+
+.button {
+  /* style button */
+  background: #F9F7F7;
+  border-radius: 10px;
+  border: none;
+  padding: 14px 28px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #112D4E;
+  align-self: center;
+}
+
+/* style button hover and active */
+.button:hover {
+  background: #DBE2EF;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
