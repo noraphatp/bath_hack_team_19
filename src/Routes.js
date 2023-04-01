@@ -8,6 +8,7 @@ import FindJobs from "./components/FindJobs";
 import Accessibility from "./components/Accessibility"; // Import the Accessibility component
 import About from "./components/About"; // Import the About component
 
+
 const AppRoutes = () => {
   return (
     <Router>

@@ -4,7 +4,6 @@ import { Router, Route, Switch } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import LoginPageCSS from '../css/loginpage.module.css';
-import { Link } from 'react-router-dom';
 
 
 

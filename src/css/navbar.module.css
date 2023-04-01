@@ -126,6 +126,8 @@
 .navbar {
   background-color: var(--default-bg-color);
   color: var(--default-text-color);
+}
+
 .container {
   font-size: var(--font-size, 16px);
 }
