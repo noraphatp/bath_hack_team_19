@@ -7,7 +7,6 @@ import About from "./components/AboutPage";
 import UserList from "./components/UserList";
 import FindJobs from "./components/FindJobs";
 import Accessibility from "./components/Accessibility"; // Import the Accessibility component
-import About from "./components/About"; // Import the About component
 
 const AppRoutes = () => {
   return (
