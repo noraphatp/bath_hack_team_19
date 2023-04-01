@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import Navbar from './Navbar';
 import HomePageCSS from "../css/homePage.module.css";
 
-export default function Accessibility() {
-  return (
-  <div>
-    <Navbar />
-  <h1>Welcome to the Accessibility Page</h1>
-  </div>
+export default function About() {
+  return (  
+    <div>
+      <Navbar />
+    <h1>Welcome to the About Page</h1>
+    </div>
   );
 };
