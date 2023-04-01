@@ -1,13 +1,11 @@
-import React from "react";
+import React from 'react';
+import './App.css';
 import Routes from "./Routes";
-import SearchBar from "./components/SearchBar"
-import LocationSearchBar from "./components/LocationSearchBar"
-import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <LocationSearchBar />
+    <div>
+      <Routes />
     </div>
   );
 }

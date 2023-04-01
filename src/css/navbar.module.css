@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: #7286D3;
   padding: 1rem;
 }
 
@@ -29,6 +29,9 @@
 
 .navbarItem {
   margin-left: 1rem;
+  font-family: var(--primary-font-family);
+  font-size: 40px; /* Updated font-size to 40px */
+  padding-right: 3rem;
 }
 
 .navbarLink {
@@ -44,3 +47,7 @@
 .navbarLogo img {
   height: 80px;
 }
+
+/* .container {
+  font-size: var(--font-size, 16px);
+} */
