@@ -13,36 +13,36 @@ function SignupPage() {
 		// Add your authentication logic here
 	};
 
-	const [fullnameInput, setFullnameInput] = useState('');
-	const [emailInput, setEmailInput] = useState('');
-	const [passwordInput, setPasswordInput] = useState('');
+	const [fullnameInput, setFullnameInput] = useState("");
+	const [emailInput, setEmailInput] = useState("");
+	const [passwordInput, setPasswordInput] = useState("");
 
 	const handleSpeechInputFullname = () => {
-	  const recognition = new window.webkitSpeechRecognition();
-	  recognition.onresult = function(event) {
-		const result = event.results[0][0].transcript;
-		setFullnameInput(result);
-	  };
-	  recognition.start();
+		const recognition = new window.webkitSpeechRecognition();
+		recognition.onresult = function (event) {
+			const result = event.results[0][0].transcript;
+			setFullnameInput(result);
+		};
+		recognition.start();
 	};
 
 	const handleSpeechInputEmail = () => {
-	  const recognition = new window.webkitSpeechRecognition();
-	  recognition.onresult = function(event) {
-		const result = event.results[0][0].transcript;
-		setEmailInput(result);
-	  };
-	  recognition.start();
+		const recognition = new window.webkitSpeechRecognition();
+		recognition.onresult = function (event) {
+			const result = event.results[0][0].transcript;
+			setEmailInput(result);
+		};
+		recognition.start();
 	};
 
 	const handleSpeechInputPassword = () => {
 		const recognition = new window.webkitSpeechRecognition();
-		recognition.onresult = function(event) {
-		  const result = event.results[0][0].transcript;
-		  setPasswordInput(result);
+		recognition.onresult = function (event) {
+			const result = event.results[0][0].transcript;
+			setPasswordInput(result);
 		};
 		recognition.start();
-	  };
+	};
 
 	return (
 		<div className={SignupPageCSS.container}>
@@ -52,7 +52,7 @@ function SignupPage() {
 					onSubmit={handleSubmit}
 					className={SignupPageCSS.form}
 				>
-					 <div>
+					<div>
 						<label htmlFor="fullnanme">Full name</label>
 						<div className={SignupPageCSS.inputWithButton}>
 							<input
@@ -118,10 +118,11 @@ function SignupPage() {
 					<p className={SignupPageCSS["register-text"]}>
 						Already have an account yet?
 					</p>
-					<Link to="/login" className={SignupPageCSS['link-to-signup']}>
-						<button>
-							Login
-						</button>
+					<Link
+						to="/login"
+						className={SignupPageCSS["link-to-signup"]}
+					>
+						<button>Login</button>
 					</Link>
 				</form>
 			</div>
