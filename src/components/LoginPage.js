@@ -34,43 +34,52 @@ function LoginPage() {
     }
   }; 
 
-  return (
-    <div className={LoginPageCSS.container}>
-      <div className={LoginPageCSS["sub-container"]}>
-      <p className={LoginPageCSS.header}>{action === 'login' ? 'Login' : 'Sign Up'}</p>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div>
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-          <div>
-            <button type="submit">{action === 'login' ? 'Login' : 'Sign Up'}</button>
-          </div>
-          <div>
-            <button type="button" onClick={() => setAction(action === 'login' ? 'signup' : 'login')}>
-              {action === 'login' ? 'Create an account' : 'Already have an account?'}
-            </button>
-          </div>
-        </form> 
-        </div>
-    </div>
-  );
+	return (
+		<div className={LoginPageCSS.container}>
+			<div className={LoginPageCSS["sub-container"]}>
+				<p className={LoginPageCSS.header}>Login</p>
+				<form
+					onSubmit={handleSubmit}
+					className={LoginPageCSS.form}
+				>
+					<div>
+						<label htmlFor="email">Email</label>
+						<input
+							type="email"
+							id="email"
+							value={email}
+							onChange={e => setEmail(e.target.value)}
+							required
+						/>
+					</div>
+					<div>
+						<label htmlFor="password">Password</label>
+						<input
+							type="password"
+							id="password"
+							value={password}
+							onChange={e => setPassword(e.target.value)}
+							required
+						/>
+					</div>
+					<button
+						type="submit"
+						className={LoginPageCSS["login-button"]}
+					>
+						Login
+					</button>
+					<p className={LoginPageCSS["register-text"]}>
+						Don't have an account yet?
+					</p>
+					<Link to="/signup" className={LoginPageCSS['link-to-signup']}>
+						<button>
+							Create account
+						</button>
+					</Link>
+				</form>
+			</div>
+		</div>
+	);
 }
 
 export default LoginPage;
