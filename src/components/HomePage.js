@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // import { useHistory } from "react-router-dom";
-import HomePageCSS from "../css/homePage.module.css";
+import Navbar from './Navbar';
+import HomePageCSS from "../css/homepage.module.css";
 
 export default function HomePage() {
   return (
     <div>
+      <Navbar />
       <h1>Welcome to the Home Page</h1>
       <Link to="/login">
         <button>Go to Login Page</button>
