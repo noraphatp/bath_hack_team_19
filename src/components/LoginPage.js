@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import LoginPageCSS from "../css/loginpage.module.css";
 import { auth } from "../firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -12,20 +13,22 @@ const LoginPage = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    try {
-      if (isSignup) {
-        await auth.createUserWithEmailAndPassword(email, password);
-      } else {
-        await auth.signInWithEmailAndPassword(email, password);
-        navigate("/find-jobs");
-      }
-      setError("");
-    } catch (err) {
-      setError(err.message);
-    }
-  }; 
+	event.preventDefault();
+	try {
+	  if (isSignup) {
+		// sign up code
+	  } else {
+		// sign in code
+		const userCredential = await signInWithEmailAndPassword(auth, email, password);
+		console.log("Signed in:", userCredential.user);
+		navigate("/find-jobs"); // Navigate to the find jobs page
+	  }
+	} catch (error) {
+	  console.error("Error:", error.message);
+	}
+  };
 
   return (
     <div className={LoginPageCSS.container}>
