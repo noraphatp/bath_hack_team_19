@@ -5,13 +5,44 @@ import SignupPageCSS from "../css/loginpage.module.css";
 function SignupPage() {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-  const [fullname, setFullname] = useState("");
+	const [fullname, setFullname] = useState("");
 
 	const handleSubmit = e => {
 		e.preventDefault();
 		console.log("Email:", email, "Password:", password);
 		// Add your authentication logic here
 	};
+
+	const [fullnameInput, setFullnameInput] = useState('');
+	const [emailInput, setEmailInput] = useState('');
+	const [passwordInput, setPasswordInput] = useState('');
+
+	const handleSpeechInputFullname = () => {
+	  const recognition = new window.webkitSpeechRecognition();
+	  recognition.onresult = function(event) {
+		const result = event.results[0][0].transcript;
+		setFullnameInput(result);
+	  };
+	  recognition.start();
+	};
+
+	const handleSpeechInputEmail = () => {
+	  const recognition = new window.webkitSpeechRecognition();
+	  recognition.onresult = function(event) {
+		const result = event.results[0][0].transcript;
+		setEmailInput(result);
+	  };
+	  recognition.start();
+	};
+
+	const handleSpeechInputPassword = () => {
+		const recognition = new window.webkitSpeechRecognition();
+		recognition.onresult = function(event) {
+		  const result = event.results[0][0].transcript;
+		  setPasswordInput(result);
+		};
+		recognition.start();
+	  };
 
 	return (
 		<div className={SignupPageCSS.container}>
@@ -21,35 +52,62 @@ function SignupPage() {
 					onSubmit={handleSubmit}
 					className={SignupPageCSS.form}
 				>
-					<div>
+					{/* <div>
 						<label htmlFor="fullnanme">Full name</label>
-						<input
-							type="fullname"
-							id="fullname"
-							value={fullname}
-							onChange={e => setFullname(e.target.value)}
-							required
-						/>
+						<div className={SignupPageCSS.inputWithButton}>
+							<input
+								type="fullname"
+								id="fullname"
+								value={fullnameInput}
+								onChange={e => setFullnameInput(e.target.value)}
+								required
+							/>
+							<button
+								type="button"
+								className={SignupPageCSS.button}
+								onClick={handleSpeechInputFullname}
+							>
+								🎤
+							</button>
+						</div>
 					</div>
 					<div>
 						<label htmlFor="email">Email</label>
-						<input
-							type="email"
-							id="email"
-							value={email}
-							onChange={e => setEmail(e.target.value)}
-							required
-						/>
+						<div className={SignupPageCSS.inputWithButton}>
+							<input
+								type="email"
+								id="email"
+								value={emailInput}
+								onChange={e => setEmailInput(e.target.value)}
+								required
+							/>
+							<button
+								type="button"
+								className={SignupPageCSS.button}
+								onClick={handleSpeechInputEmail}
+							>
+								🎤
+							</button>
+						</div>
 					</div>
 					<div>
 						<label htmlFor="password">Password</label>
-						<input
-							type="password"
-							id="password"
-							value={password}
-							onChange={e => setPassword(e.target.value)}
-							required
-						/>
+						<div className={SignupPageCSS.inputWithButton}>
+							<input
+								type="password"
+								id="password"
+								value={passwordInput}
+								onChange={e => setPasswordInput(e.target.value)}
+								required
+							/>
+							<button
+								type="button"
+								className={SignupPageCSS.button}
+								onClick={handleSpeechInputPassword}
+							>
+								🎤
+							</button>
+						</div>
 					</div>
 					<button
 						type="submit"
