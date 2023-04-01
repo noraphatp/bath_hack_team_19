@@ -20,11 +20,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 }
 
 .header {
-  margin-top: 48px;
+  margin-top: 36px;
+  margin-bottom: 12px;
   font-size: 60px;
   font-weight: 600;
   color: #ffffff;
@@ -45,12 +45,17 @@
   margin-bottom: 20px;
 }
 
+.inputWithButton {
+  display: flex;
+  flex-direction: row;
+}
+
 .form label {
   font-size: 18px;
   font-weight: 600;
   color: #333;
-
 }
+
 
 /* make the inputs the same size */
 .form input {
