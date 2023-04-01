@@ -52,7 +52,7 @@ function SignupPage() {
 					onSubmit={handleSubmit}
 					className={SignupPageCSS.form}
 				>
-					 <div>
+					<div>
 						<label htmlFor="fullnanme">Full name</label>
 						<div className={SignupPageCSS.inputWithButton}>
 							<input
