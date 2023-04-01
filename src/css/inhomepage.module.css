@@ -1,0 +1,52 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	/* background-color: #fff2f2;
+   */
+  background: linear-gradient(180deg, #112D4E 0%, #3F72AF 50%);
+	height: 100vh;
+	/* cover */
+	background-size: cover;
+}
+
+.sub-container {
+	display: flex;
+  flex-direction: column;
+	height: 100%;
+}
+
+.logo {
+  margin-top: 5%;
+  margin-bottom: 20px;
+  width: 20%;
+  /* align cetnral */
+  align-self: center;
+}
+
+.quote {
+	margin: 1rem auto;
+	text-align: center;
+	color: #ffffff;
+}
+
+.quote p {
+	font-weight: 500;
+	font-size: 28px;
+	line-height: 2rem;
+}
+
+.quote-part-1 {
+	margin-bottom: 10px;
+}
+
+.buttons-container {
+  margin-top: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}

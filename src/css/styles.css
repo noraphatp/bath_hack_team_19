@@ -1,0 +1,33 @@
+/* styles.css */
+
+:root {
+    /* Default color scheme */
+    --primary-bg-color: #7286D3;
+    --primary-text-color: #FFF2F2;
+    --secondary-bg-color: #282c34;
+    --secondary-text-color: white;
+  }
+  
+  /* Deuteranopia color scheme */
+  [data-theme='deuteranopia'] {
+    --primary-bg-color: #5584a4;
+    --primary-text-color: #fff;
+    --secondary-bg-color: #1e1e1e;
+    --secondary-text-color: #c0c0c0;
+  }
+  
+  /* Protanopia color scheme */
+  [data-theme='protanopia'] {
+    --primary-bg-color: #8973a3;
+    --primary-text-color: #fff;
+    --secondary-bg-color: #282828;
+    --secondary-text-color: #d0d0d0;
+  }
+
+    /* Tritanopia color scheme */
+  [data-theme='high-contrast'] {
+    --primary-bg-color: #000000;
+    --primary-text-color: #ffffff;
+  }
+  
+  
