@@ -6,6 +6,7 @@ import SignupPage from "./components/SignupPage";
 import UserList from "./components/UserList";
 import FindJobs from "./components/FindJobs";
 import Accessibility from "./components/Accessibility"; // Import the Accessibility component
+import InHomePage from "./components/InHomePage";
 
 const AppRoutes = () => {
 	return (
@@ -32,6 +33,10 @@ const AppRoutes = () => {
 					element={<Accessibility />}
 				/>{" "}
 				{/* Add a route for Accessibility */}
+				<Route
+					path="/inhome"
+					element={<InHomePage />}
+				/>
 			</Routes>
 		</Router>
 	);
