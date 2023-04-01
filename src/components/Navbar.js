@@ -28,11 +28,6 @@ export default function Navbar() {
             </Link>
           </li>
           <li className={styles.navbarItem}>
-            <Link to="/about" className={styles.navbarLink}>
-              About the Project
-            </Link>
-          </li>
-          <li className={styles.navbarItem}>
             <Link to="/accessibility" className={styles.navbarLink}>
               Accessibility
             </Link>
