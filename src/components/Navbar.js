@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import styles from "../css/navbar.module.css";
 import { Link } from "react-router-dom";
 import logo from "./logo.png";
-import "../css/styles.css"; // Keep the import statement
-import { auth, onAuthStateChanged } from "../firebase";
+import "../css/styles.css";
+import { auth } from "../firebase";
 
 export default function Navbar() {
   const [user, setUser] = useState(null);
@@ -62,6 +62,11 @@ export default function Navbar() {
               Accessibility
             </Link>
           </li>
+          <li className={styles.navbarItem}>
+            <Link to="/about" className={styles.navbarLink}>
+              About
+            </Link>
+          </li>
           {loggedIn ? (
             <li className={styles.navbarItem}>
               <Link to="/account" className={styles.navbarLink}>
@@ -79,4 +84,4 @@ export default function Navbar() {
       </div>
     </nav>
   );
-};
+}
