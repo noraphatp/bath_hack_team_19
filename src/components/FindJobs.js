@@ -50,8 +50,25 @@ function FindJobs() {
   };
   
   // Define a function to read the text below Job Listings out loud
+  // const readJobListings = () => {
+  //   const jobListings = document.querySelector('.jobs-list');
+  //   if (isReading) {
+  //     setIsReading(false);
+  //     if (speech) {
+  //       speechSynthesis.cancel(speech);
+  //       setSpeech(null);
+  //     }
+  //   } else {
+  //     setIsReading(true);
+  //     const speech = new SpeechSynthesisUtterance(jobListings.textContent);
+  //     speech.rate = 0.5;
+  //     setSpeech(speech);
+  //     speechSynthesis.speak(speech);
+  //   }
+  // }
+
   const readJobListings = () => {
-    const jobListings = document.querySelector('.job-listings');
+    const jobListings = document.querySelector('.job-details-list');
     if (isReading) {
       setIsReading(false);
       if (speech) {
@@ -60,10 +77,13 @@ function FindJobs() {
       }
     } else {
       setIsReading(true);
-      const speech = new SpeechSynthesisUtterance(jobListings.textContent);
-      speech.rate = 0.5;
-      setSpeech(speech);
-      speechSynthesis.speak(speech);
+      const textContent = jobListings?.textContent;
+      if (textContent) {
+        const speech = new SpeechSynthesisUtterance(textContent);
+        speech.rate = 0.5;
+        setSpeech(speech);
+        speechSynthesis.speak(speech);
+      }
     }
   }
   
@@ -80,7 +100,7 @@ function FindJobs() {
         />
 
         <h2 className={styles["job-listings-header"]}>Job Listings</h2>
-        <button onClick={readJobListings}>{isReading ? 'Stop Reading' : 'Read Job Listings'}</button>
+        <button onClick={readJobListings} className={styles["read-job-listings-button"]}>{isReading ? 'Stop Reading' : 'Read Job Listings'}</button>
         <ul className={styles["jobs-list"]}>
           {filteredJobs.map((job) => (
             <li key={job.id} className={styles["job-details-list"]}>
