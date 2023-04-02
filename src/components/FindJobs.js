@@ -51,12 +51,15 @@ function FindJobs() {
           onChange={handleSearch}
         />
 
-        <h2>Job Listings</h2>
-        <ul>
+        <h2 className={styles["job-listings-header"]}>Job Listings</h2>
+        <ul className={styles["jobs-list"]}>
           {filteredJobs.map((job) => (
-            <li key={job.id}>
-              <h3>{job.title}</h3>
-              <p>{job.location}</p>
+            <li key={job.id} className={styles["job-details-list"]}>
+              <div className={styles["title-wrapper"]}>
+                <h3>{job.title}</h3>
+                <p>-</p>
+                <p>{job.location}</p>
+              </div>
               <p>{job.description}</p>
               <p>{job.accessibility}</p>
               <p>{job.companyName}</p>
