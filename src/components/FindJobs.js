@@ -23,7 +23,9 @@ function FindJobs() {
 
   const filterJobs = (query) => {
     const filtered = jobs.filter((job) =>
-      job.title.toLowerCase().includes(query.toLowerCase())
+      job.title.toLowerCase().includes(query.toLowerCase()) ||
+      job.companyName.toLowerCase().includes(query.toLowerCase()) ||
+      job.location.toLowerCase().includes(query.toLowerCase())
     );
     setFilteredJobs(filtered);
   };

@@ -5,6 +5,7 @@
     font-family: 'Noto Sans', sans-serif;
     font-weight: normal; /* Ensures the text is not bold */
     color: var(--primary-text-color);
+    font-size: calc(1.125 * var(--font-size, 16px));
   }
   
 

@@ -28,6 +28,8 @@
   [data-theme='high-contrast'] {
     --primary-bg-color: #000000;
     --primary-text-color: #ffffff;
+    --secondary-bg-color: #282828;
+    --secondary-text-color: #d0d0d0;
   }
   
   

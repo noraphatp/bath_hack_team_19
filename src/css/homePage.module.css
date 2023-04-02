@@ -26,12 +26,15 @@
 }
 
 .description {
-  /* Align central */
   display: flex;
   flex-direction: column;
   color: #fff;
   max-width: 80%;
   margin-top: 20px;
+  /* Align central */
+  align-items: center;
+  /* set align for text to center */
+  text-align: center;
 }
 
 .question {
