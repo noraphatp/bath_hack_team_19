@@ -11,9 +11,10 @@ function FindJobs() {
   useEffect(() => {
     // Replace this with an API call to fetch jobs data
     const mockJobsData = [
-      { id: 1, title: 'Software Engineer', location: 'New York' },
-      { id: 2, title: 'Product Manager', location: 'San Francisco' },
-      { id: 3, title: 'Data Scientist', location: 'Boston' },
+      { id: 1, title: 'Software Engineer', location: 'Bristol', companyName: 'Gooble', description: 'Working at Gooble as a software engineer', accessibility: 'Fully Accessible'},
+      { id: 2, title: 'Product Manager', location: 'Bath', companyName: 'Notcraft', description: 'Working at Notcraft as a product manager', accessibility: 'Fully Accessible' },
+      { id: 3, title: 'Game Dev', location: 'Trowbridge', companyName: 'Tony' , description: 'Working at Tony as a game dev', accessibility: 'Not Wheelchair Accessible' },
+      { id: 4, title: 'Data Analyst', location: 'Bath', companyName: 'Tesko', description: 'Working at Tesko as a data analyst', accessibility: 'Fully Accessible' },
       // Add more job data here...
     ];
 
@@ -54,6 +55,9 @@ function FindJobs() {
           <h3>{job.title}</h3>
           <p>{job.location}</p>
           <p>{job.description}</p>
+          <p>{job.accessibility}</p>
+          <p>{job.companyName}</p>
+
         </li>
       ))}
     </ul>

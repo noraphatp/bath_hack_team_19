@@ -25,7 +25,7 @@ export default function HomePage() {
 					were made by ChatGPT, CoPilot, and image generation software.
 				</p>
 			</div>
-			<Link to="/signup">
+			<Link to="/login">
 				<button className={HomePageCSS.button}> Get started </button>
 			</Link>
 		</div>

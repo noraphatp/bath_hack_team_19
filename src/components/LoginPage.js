@@ -28,6 +28,28 @@ const LoginPage = () => {
 	}
   };
 
+  const [fullnameInput, setFullnameInput] = useState("");
+	const [emailInput, setEmailInput] = useState("");
+	const [passwordInput, setPasswordInput] = useState("");
+
+  const handleSpeechInputEmail = () => {
+	const recognition = new window.webkitSpeechRecognition();
+	recognition.onresult = function (event) {
+		const result = event.results[0][0].transcript;
+		setEmailInput(result);
+	};
+	recognition.start();
+};
+
+const handleSpeechInputPassword = () => {
+	const recognition = new window.webkitSpeechRecognition();
+	recognition.onresult = function (event) {
+		const result = event.results[0][0].transcript;
+		setPasswordInput(result);
+	};
+	recognition.start();
+};
+
   return (
     <div className={LoginPageCSS.container}>
       <div className={LoginPageCSS["sub-container"]}>
@@ -44,6 +66,13 @@ const LoginPage = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
+		    <button
+								type="button"
+								className={LoginPageCSS.button}
+								onClick={handleSpeechInputEmail}
+							>
+								🎤
+							</button>
           </div>
           <div>
             <label htmlFor="password">Password</label>
@@ -54,6 +83,13 @@ const LoginPage = () => {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
+			<button
+								type="button"
+								className={LoginPageCSS.button}
+								onClick={handleSpeechInputPassword}
+							>
+								🎤
+							</button>
           </div>
           {error && <p className={LoginPageCSS.error}>{error}</p>}
           <button type="submit" className={LoginPageCSS["login-button"]}>
