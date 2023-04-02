@@ -8,6 +8,9 @@ function FindJobs() {
   const [search, setSearch] = useState('');
   const [filteredJobs, setFilteredJobs] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [isReading, setIsReading] = useState(false);
+  const [speech, setSpeech] = useState(null);
+
   useEffect(() => {
     // Replace this with an API call to fetch jobs data
     const mockJobsData = [
@@ -46,33 +49,52 @@ function FindJobs() {
     setSearchQuery(event.target.value);
   };
   
+  // Define a function to read the text below Job Listings out loud
+  const readJobListings = () => {
+    const jobListings = document.querySelector('.job-listings');
+    if (isReading) {
+      setIsReading(false);
+      if (speech) {
+        speechSynthesis.cancel(speech);
+        setSpeech(null);
+      }
+    } else {
+      setIsReading(true);
+      const speech = new SpeechSynthesisUtterance(jobListings.textContent);
+      speech.rate = 0.5;
+      setSpeech(speech);
+      speechSynthesis.speak(speech);
+    }
+  }
+  
   return (
     <div>
       <Navbar />
-      <h1>Find Jobs</h1>
-      <input
-        type="text"
-        placeholder="Search jobs by title"
-        value={searchQuery}
-        onChange={handleSearch}
-      />
-  
-  <h2>Job Listings</h2>
-    <ul>
-      {filteredJobs.map((job) => (
-        <li key={job.id}>
-          <h3>{job.title}</h3>
-          <p>{job.location}</p>
-          <p>{job.description}</p>
-          <p>{job.accessibility}</p>
-          <p>{job.companyName}</p>
+      <div className={styles.contentContainer}>
+        <h1>Find Jobs</h1>
+        <input
+          type="text"
+          placeholder="Search jobs by title"
+          value={searchQuery}
+          onChange={handleSearch}
+        />
 
-        </li>
-      ))}
-    </ul>
-  </div>
+        <h2>Job Listings</h2>
+        <button onClick={readJobListings}>{isReading ? 'Stop Reading' : 'Read Job Listings'}</button>
+        <ul className="job-listings">
+          {filteredJobs.map((job) => (
+            <li key={job.id}>
+              <h3>{job.title}</h3>
+              <p>{job.location}</p>
+              <p>{job.description}</p>
+              <p>{job.accessibility}</p>
+              <p>{job.companyName}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
-      }
+}
   
-
 export default FindJobs;
