@@ -7,3 +7,17 @@
     color: var(--primary-text-color);
   }
   
+
+  .textSlider::after {
+    content: '|';
+    display: inline;
+    animation: blink 1s linear infinite;
+    color: var(--primary-text-color);
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  

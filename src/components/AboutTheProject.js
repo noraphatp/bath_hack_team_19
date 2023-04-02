@@ -24,8 +24,9 @@ const AboutTheProject = () => {
               We're proud of our achievements and hope to positively impact the lives of people with disabilities.<br /><br />
             </p>
             <p className={styles.text}>
-              Explore our site to learn more about how AI has shaped this project from start to finish.
+              Explore our site to learn more about how AI has shaped this project from start to finish.<br /><br /><br /><br /><br />
             </p>
+
           </div>
           <div className={styles.promptsContainer}>
             <Prompts />
