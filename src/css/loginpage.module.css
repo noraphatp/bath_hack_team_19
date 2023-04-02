@@ -98,7 +98,7 @@
   align-self: center;
 }
 
-.link-to-signup button {
+.link-to-signup {
   padding: 10px 20px;
   border: none;
   border-radius: 12px;
@@ -109,3 +109,10 @@
   cursor: pointer;
 }
 
+.link-to-signup:hover {
+  background-color: #667edd;
+}
+
+.link-to-signup:active {
+  transform: scale(0.95);
+}
