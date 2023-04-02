@@ -42,30 +42,30 @@ function FindJobs() {
   return (
     <div>
       <Navbar />
-      <h1>Find Jobs</h1>
-      <input
-        type="text"
-        placeholder="Search jobs by title"
-        value={searchQuery}
-        onChange={handleSearch}
-      />
-  
-  <h2>Job Listings</h2>
-    <ul>
-      {filteredJobs.map((job) => (
-        <li key={job.id}>
-          <h3>{job.title}</h3>
-          <p>{job.location}</p>
-          <p>{job.description}</p>
-          <p>{job.accessibility}</p>
-          <p>{job.companyName}</p>
+      <div className={styles.contentContainer}>
+        <h1>Find Jobs</h1>
+        <input
+          type="text"
+          placeholder="Search jobs by title"
+          value={searchQuery}
+          onChange={handleSearch}
+        />
 
-        </li>
-      ))}
-    </ul>
-  </div>
+        <h2>Job Listings</h2>
+        <ul>
+          {filteredJobs.map((job) => (
+            <li key={job.id}>
+              <h3>{job.title}</h3>
+              <p>{job.location}</p>
+              <p>{job.description}</p>
+              <p>{job.accessibility}</p>
+              <p>{job.companyName}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
-      }
+}
   
-
 export default FindJobs;
