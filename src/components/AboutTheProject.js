@@ -24,8 +24,12 @@ const AboutTheProject = () => {
               We're proud of our achievements and hope to positively impact the lives of people with disabilities.<br /><br />
             </p>
             <p className={styles.text}>
-              Explore our site to learn more about how AI has shaped this project from start to finish.<br /><br /><br /><br /><br />
+              Explore our site to learn more about how AI has shaped this project from start to finish.<br /><br />
             </p>
+            <p className={styles.text}>
+              0 lines of code written by us. Made using 12,000+ lines of ChatGPT prompts and responses.
+            </p>
+
 
           </div>
           <div className={styles.promptsContainer}>
