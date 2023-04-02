@@ -1,6 +1,7 @@
 import { db } from "./firebase";
 import { collection, addDoc } from "firebase/firestore";
 
+
 async function addJob(title, location, companyName, description) {
   try {
     const jobData = {
@@ -8,7 +9,7 @@ async function addJob(title, location, companyName, description) {
       location,
       companyName,
       description,
-      accessability,
+      accessibility,
       // Add more fields as needed
     };
 
