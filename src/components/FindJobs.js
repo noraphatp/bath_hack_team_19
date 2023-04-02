@@ -15,6 +15,13 @@ function FindJobs() {
       { id: 2, title: 'Product Manager', location: 'Bath', companyName: 'Notcraft', description: 'Working at Notcraft as a product manager', accessibility: 'Fully Accessible' },
       { id: 3, title: 'Game Dev', location: 'Trowbridge', companyName: 'Tony' , description: 'Working at Tony as a game dev', accessibility: 'Not Wheelchair Accessible' },
       { id: 4, title: 'Data Analyst', location: 'Bath', companyName: 'Tesko', description: 'Working at Tesko as a data analyst', accessibility: 'Fully Accessible' },
+      { id: 5, title: 'Teacher', location: 'Bath', companyName: 'School of Teaching', description: 'Working at SoT as a Teacher', accessibility: 'Fully Accessible'},
+      { id: 6, title: 'Marketing Specialist', location: 'Bristol', companyName: 'PixelCorp', description: 'Managing marketing campaigns for PixelCorp clients', accessibility: 'Fully Accessible'},
+      { id: 7, title: 'Web Developer', location: 'Chippenham', companyName: 'WebWizards', description: 'Developing and maintaining client websites at WebWizards', accessibility: 'Partially Accessible'},
+      { id: 8, title: 'Data Analyst', location: 'Trowbridge', companyName: 'DataSolutions', description: 'Analyzing data and providing insights for DataSolutions clients', accessibility: 'Fully Accessible'},
+      { id: 9, title: 'Graphic Designer', location: 'Frome', companyName: 'DesignHub', description: 'Creating visual concepts for DesignHub clients', accessibility: 'Fully Accessible'},
+      { id: 10, title: 'Project Manager', location: 'Weston-super-Mare', companyName: 'ManageIt', description: 'Leading projects and ensuring timely delivery at ManageIt', accessibility: 'Partially Accessible'},
+      { id: 11, title: 'HR Specialist', location: 'Radstock', companyName: 'PeopleFirst', description: 'Managing HR processes and employee relations at PeopleFirst', accessibility: 'Fully Accessible'},
       // Add more job data here...
     ];
 
