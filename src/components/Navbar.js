@@ -59,28 +59,33 @@ export default function Navbar() {
             <Link to="/find-jobs" className={styles.navbarLink}>
               Find Jobs
             </Link>
+            <p>1</p>
           </li>
           <li className={styles.navbarItem}>
             <Link to="/accessibility" className={styles.navbarLink}>
               Accessibility
             </Link>
+            <p>2</p>
           </li>
           <li className={styles.navbarItem}>
             <Link to="/about" className={styles.navbarLink}>
               About
             </Link>
+            <p>3</p>
           </li>
           {loggedIn ? (
             <li className={styles.navbarItem}>
               <Link to="/account" className={styles.navbarLink}>
                 My Account
               </Link>
+              <p>4</p>
             </li>
           ) : (
             <li className={styles.navbarItem}>
               <Link to="/login" className={styles.navbarLink}>
                 Login
               </Link>
+              <p>4</p>
             </li>
           )}
         </ul>
