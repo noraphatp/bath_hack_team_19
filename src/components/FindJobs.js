@@ -68,7 +68,7 @@ function FindJobs() {
   // }
 
   const readJobListings = () => {
-    const jobListings = document.querySelector('.job-details-list');
+    const jobListings = document.querySelector('.listing');
     if (isReading) {
       setIsReading(false);
       if (speech) {
@@ -105,13 +105,13 @@ function FindJobs() {
           {filteredJobs.map((job) => (
             <li key={job.id} className={styles["job-details-list"]}>
               <div className={styles["title-wrapper"]}>
-                <h3>{job.title}</h3>
+                <h3 className={styles.listing}>{job.title}</h3>
                 <p>-</p>
-                <p>{job.location}</p>
+                <p className={styles.listing}>{job.location}</p>
               </div>
-              <p>{job.description}</p>
-              <p>{job.accessibility}</p>
-              <p>{job.companyName}</p>
+              <p className={styles.listing}>{job.description}</p>
+              <p className={styles.listing}>{job.accessibility}</p>
+              <p className={styles.listing}>{job.companyName}</p>
             </li>
           ))}
         </ul>
