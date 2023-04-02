@@ -29,6 +29,9 @@ export default function Navbar() {
             window.location.href = "/accessibility";
             break;
           case "3":
+            window.location.href = "/about";
+            break;
+          case "4":
             window.location.href = "/login";
             break;
           default:
