@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+
+
+.textSlider {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: normal; /* Ensures the text is not bold */
+    color: var(--primary-text-color);
+  }
+  
