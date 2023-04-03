@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# JobBridge -  A fully AI generated Bath Hack 2023 Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://user-images.githubusercontent.com/117474143/229582070-bf32b427-9963-43c1-891d-dd0300114ed6.png)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Inspiration
 
-### `npm start`
+Our inspiration for the JobBridge project came from the mindset of "Shows up to a hackathon. Codes 0 lines of code. Leaves." We wanted to explore the possibilities of AI-generated code and understand the potential of such an approach in software development. This project aims to prove that an entire platform can be built with minimal human intervention by leveraging powerful AI models like OpenAI's GPT.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## What it does
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+JobBridge is an accessible job search platform designed to make the job hunting process easier and more inclusive for everyone, regardless of their abilities. The platform offers a comprehensive set of accessibility features to cater to diverse user needs. Users can search for jobs, filter them based on various parameters, and learn more about the roles and their accessibility provisions.
 
-### `npm test`
+## How we built it
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+We used OpenAI's GPT technology for code generation, which allowed us to build the entire platform with minimal human coding. By providing GPT with context, desired outcomes, and specific requirements, we were able to generate code snippets, CSS styles, and even entire components for our application. As a result, we were able to focus on the overall project structure and functionality instead of writing lines of code.
 
-### `npm run build`
+## Challenges we ran into
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Throughout the development process, we faced several challenges. One of the primary issues was making small changes to the generated code, as AI-generated code sometimes required more extensive modifications or workarounds. We addressed this by utilizing comments and suggestions from CoPilot to help us refine and regenerate code snippets as needed.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Another challenge was creating a database tailored to our specific needs. AI code generation for databases proved to be more difficult, as it required a deeper understanding of our platform's unique requirements and data structures.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Accomplishments that we're proud of
 
-### `npm run eject`
+We are proud of the extensive accessibility features that JobBridge offers, such as:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Browsing jobs based on disability access provisions
+- Adjustable font sizes for visually impaired users
+- Easy-to-change color palettes for users with color blindness
+- Text-to-speech and speech-to-text functionality
+- Keyboard navigation support
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+These features showcase our commitment to creating an inclusive platform that caters to the needs of all users.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## What we learned
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The JobBridge project taught us the importance of thinking about software development at a higher level of abstraction. By focusing on the overall structure and functionality of the application, rather than the specifics of the code itself, we were able to leverage AI-generated code to create a fully functional platform with minimal human intervention.
 
-## Learn More
+## What's next for JobBridge
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+There are several exciting directions for future development:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Migrating job information to a suitable database for more robust data management
+- Creating an employer-specific portal for companies to post job vacancies directly on the platform
+- Implementing an easy-to-use filter system for users to find jobs based on their preferences and requirements
 
-### Code Splitting
+By continuing to enhance JobBridge's features and capabilities, we aim to create an even more powerful and accessible platform for job seekers everywhere.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+![image](https://user-images.githubusercontent.com/117474143/229581572-aacd3d90-5dd9-4718-8489-c937b480886a.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![image](https://user-images.githubusercontent.com/117474143/229582280-a49987d2-6285-4e69-8187-bb753cbb66b2.png)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![image](https://user-images.githubusercontent.com/117474143/229582335-16d42598-48a0-497e-b6bd-8c325704d53e.png)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
